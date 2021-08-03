@@ -1,1 +1,29 @@
-﻿<h1>FBPage - FizzBuzz!</h1>
+﻿<div class="container mt-3 mt-lg-5 py-5">
+    <div class="row row-cols-1 row-cols-lg-2">
+        <div class="col col-lg-4 border-end border-2">
+            <h1>FizzBuzz:<br> A Coding Project</h1>
+            <h4 class="lead">Bibbity bobbity boop! A javascript coding exercise using loops. The app prints numbers 1 through 100, but multiples of 3 display <b>"Fizz"</b> and multiples of 5 display <b>"Buzz"</b>. Multiples of both numbers display <b>"FizzBuzz"</b>.</h4>
+            <h2 class="mt-4">Instructions</h2>
+            <p>Enter a "Fizz" and a "Buzz" value. Press the button and the values will appear.</p>
+        </div>
+        <div class="col col-lg-8">
+            <h5>Enter Values</h5>
+            @* Form Goes Here *@
+        <form asp-controller="Home" asp-action="FBPage" method="post">
+            <div class="form-group">
+                <label asp-for="FizzValue">Fizz Value</label>
+                <input type="number" asp-for="FizzValue" class="form-control" placeholder="Enter Fizz" value="@Model.FizzValue">
+            </div>
+            <div class="form-group">
+                <label asp-for="BuzzValue">Buzz Value</label>
+                <input type="number" asp-for="BuzzValue" class="form-control" placeholder="Enter Buzz" value="@Model.BuzzValue">
+            </div>
+            <button type="submit" class="btn btn-dark">Submit</button>
+        </form>
+            <h3 class="mt-5 border-bottom border-2">Results</h3>
+            <div class="table-responsive">
+            @* Table Goes Here *@
+            </div>
+        </div>
+    </div>
+</div>
